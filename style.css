@@ -1,0 +1,359 @@
+/*about's header background image*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap')
+
+/*TODO: fix about's header font*/
+@font-face {
+    font-family: "Black Ops One";
+    src: url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box; /*take content into account for padding margin when sizing width, height*/  
+    font-family: Raleway;
+    color:#777 /*light grey easier on the eye*/
+    /* padding: 0.5em 0; */
+}
+
+html, body { /*they're defaulted with padding and margin*/
+    margin: 0;
+    padding:0;
+    background-color: #f7efd2;
+}
+
+.nav ul { /*All ul inside nav <-- Nav bar of home, about,... list ul has default margin*/
+    margin: 0;
+}
+
+.nav li {
+    display: inline; /*home about on same line*/
+}
+
+.nav a { /*style the links*/
+    display: inline-block; /*add padding + height to inline element that inline doesn't allow*/
+    padding: .5em; /*pad left and right to word, but not top bottom*/
+    color: white;
+    text-decoration: none; 
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.1em; /*10% bigger*/
+    font-weight: light; /*blend into the background better*/
+    border-bottom: 1px solid rgba(255, 255, 255, .3)/*replace <hr> in html*/
+    
+}
+
+.main-nav li {
+    padding: 0 5% /*0 top bottom, 5% left right*/
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .30)
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, .6); /*black tint*/
+    background-image: url(Image/bg1.jpeg);
+    background-blend-mode: multiply; /*blend image and tint*/
+    background-size: cover; /*expand as wide + tall as it can => image will grow and shrink as resizing window*/
+    padding: 30px 
+}
+
+.artist-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Black Ops One";
+    font-weight: normal; /*h1's text is bolded by default */
+    color: white;
+}
+
+.artist-name-header {
+    font-size: 7em;
+}
+
+/* #content1 { /*"Don't use empty ruleset error": no content in {} 
+    color: blue;
+} 
+*/
+
+.content-section {
+    margin: 1em; /*space on top, left, right and bottom of element*/
+}
+
+.container {
+    max-width: 900px; /*element cannot get wider than 900 px*/
+    margin: 0 auto; /*center it, top + bottom margin = 0; and auto = left + right margin*/
+    padding: 0 1.5em; /*space 1.5 em on left and right*/
+}
+
+/*TODO: center the portrait*/
+.portrait {
+    float: left; /*image floats in center w/ text wraps around*/
+    height: 450px;
+    width: 450 px;
+    margin: 10px; /*15px of space from all sides of text */
+    padding: 0 1.5em;
+    border-radius: 50%;/*how much to curve the edges --> circle*/
+}
+
+.section-header {
+    font-family: "Playfair Display";
+    /* font-weight: normal; */
+    font-size: 2.5em;
+    color: #333; /*darker than 777 light grey*/
+    text-align: center;
+    /*TODO: make content closer to ABOUT: border-bottom-width: 0.5em; */
+} 
+
+.main-footer {
+    background-color: #4a3b61;
+    color: white;
+    padding: .25em 0;
+    font-size: 10px;
+}
+
+.main-footer-container {
+    display: flex; /*line up name and icons*/
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1; /*icons can grow*/
+    text-align: end; /*on the right side*/
+}
+
+.footer-nav li {
+    padding:0 .5em; /*space around each icon*/
+}
+
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;/*text in the center*/
+    vertical-align: middle;
+    padding: .67em; 
+    cursor: pointer; /*when hover, becomes hand icon*/
+}
+
+.btn-header {
+    margin: .5em 15% 2em 20%;/*top=half the size of font, right=15% of space occupied, */
+    color: white;
+    border: 2px solid #8c3920;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0; /*remove the rounded corner*/
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+/*To fixate the position of button when resizing window, wrap button around div*/
+
+.btn-play {
+    margin: 0 auto; /*center itself horizontally. Button is NOT a block level element --> cannot have auto margin*/
+    display: block;
+    color: #8c3920;
+    font-size: 4em;
+    border-radius: 50%;
+    padding: 0; /*remove padding to make a circle*/
+    width: 100px;
+    height: 100px;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em; /*space b/w content and border*/
+    margin-bottom: 1em; /*margin's outside of border --> space between border and next line*/
+}
+
+.tour-row:last-child { /*last-child selector: get rid of bottom line*/
+    border-bottom: none;
+}
+
+.tour-item {
+    display: inline-block; /*act like inline-element(same line) but also a block element (has width)*/
+    padding-right: .5em; 
+    /*inline element cannot have width, */
+}
+
+/*All tour-items should add up to 96% because in-line block has default spacing between block elements*/
+.tour-date {
+    color: #555;
+    font-weight: bold; /*after got rid of <strong> which is semantic*/
+    width: 15%; /*more space bw date and the rest*/
+}
+
+.tour-city {
+    width: 24%; /*larger text than date*/
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-button {
+    max-width: 19%; /*width will always be the same as content but not larger than 20% of screen*/
+}
+
+.button-primary {
+    color: white;
+    background-color: #8c3920;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.button-primary:hover {
+    background-color: #a86032; 
+}
+
+/*margin around items*/
+.repertoire-item {
+    margin: 30px;
+}
+
+.item-title {
+    display: block; /*on its own line*/
+    width: 100%; /*take up entire width on top of image*/
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.item-image {
+    height: 250px;
+    /*by default, width is as large as need to be so aspect ratio is the same*/
+}
+
+.item-detail {
+    display: flex; /*center details vertically, wrapper goes around detail*/
+    align-items: center; /*price # and button's text are aligned*/
+    padding: 5px;
+}
+
+.item-price {
+    flex-grow: 1; /*price will take as much width as possible*/
+    color: #333;
+}
+
+.items {
+    display: flex; /*flex and wrap allow resizing window*/
+    flex-wrap: wrap;
+    justify-content: space-around; /*space evenly between each element*/
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-column {
+    border-bottom: 1px solid black;
+    margin-right: 1.5em; /*space btw columns*/
+    padding-bottom: 10px; /*padding on the bottom bw columns and underline*/
+    margin-top: 10px;
+    display: flex;
+    align-items: center; /*words aligned on same line*/
+}
+
+.cart-row {
+    display: flex; /*Flex-box does not add any spaces --> can add to 100%. Elements on one line*/
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: 0.5em;
+    font-size: 1.25em;
+    margin: 1.1em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #f56042;
+    border-radius: .3em;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color:#ad362d;
+}
+
+.cart-quantity-input {
+    height: 34px;/*same height as button*/
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid #4a3b61;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.1em;
+    margin-right: 20px; /*separate input from button*/
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none; /*remove individual border*/
+}
+
+.cart-total {
+    text-align: end; /*at the end of the line*/
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.75em;
+    color: black;
+    margin-right: 1em; /*space total away from price*/
+    font-size: 1.5em;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.3em;
+}
+
+.button-purchase {
+    display: block; /*like <p>, starts on a new line, and takes up the whole width */
+    margin: 40px auto 80px auto;/*top left bottom right */
+    font-size: 1.5em;   
+} 

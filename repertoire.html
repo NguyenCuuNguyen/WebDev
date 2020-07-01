@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hiroyuki Sawano | Repertoire</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav"> 
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="repertoire.html">REPERTOIRE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            
+            <h1 class="artist-name artist-name-header">Hiroyuki Sawano</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">ALBUMS</h2>
+                <div class="items">
+                    <div class="repertoire-item">
+                        <!--remove <div> cuz CSS can create its own line-->
+                        <span class="item-title">Attack On Titan Season 2</span> <!--Style bold with CSS-->
+                        <img class="item-image" src="Image/aot.jpeg">
+                        <div class="item-detail">
+                            <span class="item-price">Price</span>
+                            <button class="btn button-primary item-button" role="button">Details</button>
+                        </div>
+                    </div>
+                    <div class="repertoire-item">
+                        <span class="item-title">Attack On Titan Season 3</span> 
+                        <img class="item-image" src="Image/aot.jpeg">
+                        <div class="item-detail">
+                            <span class="item-price">Price</span>
+                            <button class="btn button-primary item-button" role="button">Details</button>
+                        </div>
+                    </div>
+                     
+                
+
+                    <div class="repertoire-item">
+                        <span class="item-title">Seven Deadly Sins Season 1</span> 
+                        <img class="item-image" src="Image/7sins.jpeg">
+                        <div class="item-detail">
+                            <span class="item-price">Price</span>
+                            <button class="btn button-primary item-button" role="button">Details</button>
+                        </div>
+                    </div>      
+                    <div class="repertoire-item">
+                        <span class="item-title">Seven Deadly Sins Season 2</span> 
+                        <img class="item-image" src="Image/7sins.jpeg">
+                        <div class="item-detail">
+                            <span class="item-price">Price</span>
+                            <button class="btn button-primary item-button" role="button">Details</button>
+                        </div>   
+                    </div>
+
+
+                    <div class="repertoire-item">
+                        <span class="item-title">2V-ALK Season 1</span>
+                        <img class="item-image" src="Image/dragon.jpeg">
+                        <div class="item-detail">
+                            <span class="item-price">Price</span>
+                            <button class="btn button-primary item-button" role="button">Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="repertoire-item">
+                        <span class="item-title">2V-ALK Season 2</span> 
+                        <img class="item-image" src="Image/dragon.jpeg">
+                        <div class="item-detail">
+                            <span class="item-price">Price</span>
+                            <button class="btn button-primary item-button" role="button">Details</button>
+                        </div>   
+                    </div>
+                </div>   
+        </section>
+        
+    
+
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row"> 
+                <span class="cart-item cart-header cart-column">ITEM</span> <!--each column has the same width-->
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+
+            <div class="cart-items"> <!--To use last child selector for 1 solid bottom border-->
+                <div class="cart-row"> <!--cart-row are sibling elements-->
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="Image/wing.png">
+                        <span class="cart-item-title">Wings of Freedom</span>
+                    </div>
+                    <span class="cart-price cart-column">$5.50</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="2"> <!--without value, user can type input-->
+                        <button class="btn btn-danger" role="button">REMOVE</button>
+                    </div>     
+                </div>
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="Image/aot.jpeg" >
+                        <span class="cart-item-title">AOT season 2 soundtracks</span>
+                    </div>
+                    <span class="cart-price cart-column">$10.00</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" role="button">REMOVE</button>
+                    </div>        
+                </div>
+            </div>
+            <div class="cart-total">
+                <span class="cart-total-title">TOTAL</span>
+                <span class="cart-total-price">$30</span>
+            </div>
+            
+             <!--Last child of the container section-->
+            <button class="btn button-primary button-purchase" role="button">PURCHASE</button>
+            
+        </section>
+
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="artist-name">Hiroyuki Sawano</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCbJM_Y06iuUOl3hVPqYcvng" target="_blank">
+                            <img src="Image/youtube.png" >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/artist/0Riv2KnFcLZA3JSVryRg4y" target="_blank">
+                            <img src="Image/spotify.png">
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>

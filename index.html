@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hiroyuki Sawano | Homepage</title>
+        <meta name="description" content="This is a mockup Sawano's homepage"> <!--Will only show up under title in google search result-->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+        
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="repertoire.html">REPERTOIRE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        
+            <h1 class="artist-name artist-name-header">Hiroyuki Sawano</h1>
+            <div class="container"> <!--container class has limited width-->
+                <button class="btn btn-header" type="button">Get the Latest Album</button> <!--button is an inline element => use <br> to break line--> 
+            </div>
+            <button class="btn btn-header btn-play" type="button">&#9658</button>
+        </header>
+        <section class="content-section container"> <!--container to not grow pass 900px in stylesheet-->
+            <h2 class="section-header">TOURS</h2>
+            <div> <!--for multiple rows-->
+                <div class="tour-row"> <!--each internal div = a row-->
+                    <span class="tour-item tour-date">MARCH 7</span>
+                    <span class ="tour-item tour-arena">TOYOSU PIT</span>
+                    <span class="tour-item tour-city">TOKYO, JAPAN</span> <!--same line-->
+                    <button type="button" class="btn tour-item tour-button button-primary">BUY TICKETS</button>
+                </div>
+                
+                <div  class="tour-row">
+                    <span class="tour-item tour-date">DEC 6</span>
+                    <span class ="tour-item tour-arena">TOHO ART CENTER</span>
+                    <span class="tour-item tour-city">PUDONG, CHINA</span> 
+                    <button type="button" class="btn tour-item tour-button button-primary">BUY TICKETS</button>
+                </div>
+                
+                <div  class="tour-row">
+                    <span class="tour-item tour-date">MAY 13</span> 
+                    <span class ="tour-item tour-arena"> PACIFICO YOKOHAMA</span>
+                    <span class="tour-item tour-city">YOKOHAMA, JAPAN</span> 
+                    <button type="button" class="btn tour-item tour-button button-primary">BUY TICKETS</button>
+                </div>
+
+                <div  class="tour-row">
+                    <span class="tour-item tour-date">JUN 21</span> 
+                    <span class ="tour-item tour-arena"> CONCORD PAVILION</span>
+                    <span class="tour-item tour-city">CONCORD, USA</span> 
+                    <button type="button" class="btn tour-item tour-button button-primary">BUY TICKETS</button>
+                </div>
+
+                <div  class="tour-row">
+                    <span class="tour-item tour-date">AUG 2</span> 
+                    <span class ="tour-item tour-arena">MADISON SQUARE GARDEN</span>
+                    <span class="tour-item tour-city">NYC, USA</span> 
+                    <button type="button" class="btn tour-item tour-button button-primary">BUY TICKETS</button>
+                </div>
+
+                <div  class="tour-row">
+                    <span class="tour-item tour-date">SEP 12</span> 
+                    <span class ="tour-item tour-arena">MADISON SQUARE GARDEN</span>
+                    <span class="tour-item tour-city">NYC, USA</span> 
+                    <button type="button" class="btn tour-item tour-button button-primary">BUY TICKETS</button>
+                </div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="artist-name">Hiroyuki Sawano</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCbJM_Y06iuUOl3hVPqYcvng" target="_blank">
+                            <img src="Image/youtube.png" >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/artist/0Riv2KnFcLZA3JSVryRg4y" target="_blank">
+                            <img src="Image/spotify.png">
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>
