@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hiroyuki Sawano | Repertoire</title>
-        <link rel="stylesheet" href="style.css">
-
+        <link rel="stylesheet" href="style.css"> <!--self closing tag-->
+        <script src="store.js" async></script>  <!--script tag will load before html body. But async allow downloading html at the same time as loading js in the background-->
     </head>
     <body>
         <header class="main-header">
@@ -27,16 +27,16 @@
                         <span class="item-title">Attack On Titan Season 2</span> <!--Style bold with CSS-->
                         <img class="item-image" src="Image/aot.jpeg">
                         <div class="item-detail">
-                            <span class="item-price">Price</span>
-                            <button class="btn button-primary item-button" role="button">Details</button>
+                            <span class="item-price">$7.00</span>
+                            <button class="btn button-primary item-button" role="button">Add to Cart</button>
                         </div>
                     </div>
                     <div class="repertoire-item">
                         <span class="item-title">Attack On Titan Season 3</span> 
                         <img class="item-image" src="Image/aot.jpeg">
                         <div class="item-detail">
-                            <span class="item-price">Price</span>
-                            <button class="btn button-primary item-button" role="button">Details</button>
+                            <span class="item-price">$7.00</span>
+                            <button class="btn button-primary item-button" role="button">Add to Cart</button>
                         </div>
                     </div>
                      
@@ -46,16 +46,16 @@
                         <span class="item-title">Seven Deadly Sins Season 1</span> 
                         <img class="item-image" src="Image/7sins.jpeg">
                         <div class="item-detail">
-                            <span class="item-price">Price</span>
-                            <button class="btn button-primary item-button" role="button">Details</button>
+                            <span class="item-price">$6.00</span>
+                            <button class="btn button-primary item-button" role="button">Add to Cart</button>
                         </div>
                     </div>      
                     <div class="repertoire-item">
                         <span class="item-title">Seven Deadly Sins Season 2</span> 
                         <img class="item-image" src="Image/7sins.jpeg">
                         <div class="item-detail">
-                            <span class="item-price">Price</span>
-                            <button class="btn button-primary item-button" role="button">Details</button>
+                            <span class="item-price">$6.00</span>
+                            <button class="btn button-primary item-button" role="button">Add to Cart</button>
                         </div>   
                     </div>
 
@@ -64,8 +64,8 @@
                         <span class="item-title">2V-ALK Season 1</span>
                         <img class="item-image" src="Image/dragon.jpeg">
                         <div class="item-detail">
-                            <span class="item-price">Price</span>
-                            <button class="btn button-primary item-button" role="button">Details</button>
+                            <span class="item-price">$5.00</span>
+                            <button class="btn button-primary item-button" role="button">Add to Cart</button>
                         </div>
                     </div>
                     
@@ -73,8 +73,8 @@
                         <span class="item-title">2V-ALK Season 2</span> 
                         <img class="item-image" src="Image/dragon.jpeg">
                         <div class="item-detail">
-                            <span class="item-price">Price</span>
-                            <button class="btn button-primary item-button" role="button">Details</button>
+                            <span class="item-price">$5.00</span>
+                            <button class="btn button-primary item-button" role="button">Add to Cart</button>
                         </div>   
                     </div>
                 </div>   
@@ -91,14 +91,14 @@
             </div>
 
             <div class="cart-items"> <!--To use last child selector for 1 solid bottom border-->
-                <div class="cart-row"> <!--cart-row are sibling elements-->
+               <!-- <div class="cart-row"> #cart-row are sibling elements
                     <div class="cart-item cart-column">
                         <img class="cart-item-image" src="Image/wing.png">
                         <span class="cart-item-title">Wings of Freedom</span>
                     </div>
                     <span class="cart-price cart-column">$5.50</span>
                     <div class="cart-quantity cart-column">
-                        <input class="cart-quantity-input" type="number" value="2"> <!--without value, user can type input-->
+                        <input class="cart-quantity-input" type="number" value="1">  #without value, user can type input
                         <button class="btn btn-danger" role="button">REMOVE</button>
                     </div>     
                 </div>
@@ -113,10 +113,11 @@
                         <button class="btn btn-danger" role="button">REMOVE</button>
                     </div>        
                 </div>
+                -->
             </div>
             <div class="cart-total">
                 <span class="cart-total-title">TOTAL</span>
-                <span class="cart-total-price">$30</span>
+                <span class="cart-total-price">$0</span>
             </div>
             
              <!--Last child of the container section-->

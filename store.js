@@ -19,6 +19,16 @@ function ready() {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChange) //anything input changes value
     }
+
+    //add to cart button = item-button
+    var addToCartButtons = document.getElementsByClassName('item-button')
+    for (var i = 0; i < addToCartButtons.length; i++) {
+        var button = addToCartButtons[i]
+        button.addEventListener('click', addToCartClicked) //anything input changes value
+    }
+
+    document.getElementsByClassName('button-purchase')[0].addEventListener('click', purchaseClicked)
+
 }
 
 function removeCartItem(event) {
@@ -52,6 +62,59 @@ function quantityChange(event) {
     //isNaN = check if is not a number
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
+    }
+    updateCartTotal()
+}
+
+function addToCartClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement //repertoire-item
+    var title = shopItem.getElementsByClassName('item-title')[0].innerText
+    var price = shopItem.getElementsByClassName('item-price')[0].innerText
+    var imgSource = shopItem.getElementsByClassName('item-image')[0].src //source attribute of image
+    //add a row to the cart
+    addItemToCart(title, price, imgSource)
+    updateCartTotal()
+}
+
+function addItemToCart(title, price, imgSource) {
+    var cartRow = document.createElement('div')
+    //add class of cart-row --> flex
+    cartRow.classList.add('cart-row')
+    //add the new div into div cart items
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    //get all cart item names to avoid multiple adding of same row/item
+    var cartItemNames = document.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title){
+            alert("This item is already added to the cart")
+            return //exit out of the function (to line 73 ~)
+        }
+    }
+    var cartRowContents = `
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imgSource}">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1"> <!--without value, user can type input-->
+            <button class="btn btn-danger" role="button">REMOVE</button>
+        </div>  `  
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow) 
+    //Tho btn-danger eventListener is added in ready() before fully loaded JS, newly added items' remove button is loaded after html is fully loaded
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChange)
+}
+
+function purchaseClicked() {
+    alert("Thank you for your purchase!")
+    //delete all the items in cart
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    //continually loop and remove all child items
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
 }
